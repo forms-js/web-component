@@ -1,0 +1,30 @@
+{
+  "name": "forms-js-web-component",
+  "version": "0.0.0",
+  "description": "FormsJS web component",
+  "main": "dist/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/forms-js/web-component.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/forms-js/web-component/issues"
+  },
+  "homepage": "https://github.com/forms-js/web-component",
+  "devDependencies": {
+    "event-stream": "^3.3.0",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^4.0.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-header": "^1.2.2",
+    "gulp-less": "^3.0.1",
+    "gulp-order": "^1.1.1",
+    "gulp-watch": "^4.1.1",
+    "gulp-wrap": "^0.11.0"
+  }
+}
