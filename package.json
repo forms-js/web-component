@@ -4,7 +4,7 @@
   "description": "FormsJS web component",
   "main": "dist/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp build"
   },
   "repository": {
     "type": "git",

@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp');
 var es = require('event-stream');
 
@@ -11,7 +13,8 @@ var watch = require('gulp-watch');
 
 var pkg = require('./package.json');
 
-var banner = ['<!--',
+var banner = [
+  '<!--',
   '<%= pkg.name %> - <%= pkg.description %>',
   '@version v<%= pkg.version %>',
   '@link <%= pkg.homepage %>',
@@ -25,15 +28,15 @@ function scripts() {
     .pipe(babel())
     .on('error', log)
     .pipe(wrap('(function(){\n<%= contents %>\n}).call(this);'))
-    .pipe(wrap('<script>\n<%= contents %>\n</script>'))
-};
+    .pipe(wrap('<script>\n<%= contents %>\n</script>'));
+}
 
 function styles() {
   return gulp.src('src/less/**/*.less')
     .pipe(less())
     .on('error', log)
-    .pipe(wrap('<style>\n<%= contents %>\n</style>'))
-};
+    .pipe(wrap('<style>\n<%= contents %>\n</style>'));
+}
 
 gulp.task('build', function () {
   return es.merge([
