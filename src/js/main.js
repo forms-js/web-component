@@ -1,4 +1,4 @@
-const proto = Object.create(HTMLElement.prototype);
+const proto = Object.create(HTMLFormElement.prototype);
 
 const importDoc = document.currentScript.ownerDocument;
 

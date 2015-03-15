@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+    <title>FormsJS Web Component Demo</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="import" href="../dist/index.html">
   </head>
   <body>
-    <h1>Simple Usage</h1>
-    <forms-js></forms-js>
+    <div class="intro">
+      <h1>FormsJS Web Component Demo</h1>
+      <p>Simply import <code>dist/index.html</code> in your HTML file and use <code>&lt;forms-js&gt;</code> element.</p>
+    </div>
+    <div class="usage">
+      <h4>Simple Usage</h4>
+      <forms-js></forms-js>
+    </div>
+    <div class="usage">
+      <h4>With Submit Button</h4>
+      <forms-js target="/" method="post">
+        <button type="submit">Submit</button>
+      </forms-js>
+    </div>
   </body>
 </html>

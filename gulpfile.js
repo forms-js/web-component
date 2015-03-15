@@ -51,7 +51,7 @@ gulp.task('build', function () {
 });
 
 gulp.task('watch', function() {
-  return watch('src/**/*.{js,less,html}', function(){
+  return watch('{src,demo}/**/*.{js,less,html}', function(){
     gulp.start('build');
   });
 });
