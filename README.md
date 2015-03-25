@@ -34,7 +34,7 @@ This project is under development and is not ready for use. Please checkout the 
 
     **JavaScript**
     ```js
-        var aForm = new FormsJS();
+        var aForm = new formsjs.FormElement();
         aForm.model = aModel;
         aForm.validation = aValidation;
         aForm.view = aView;
