@@ -21,6 +21,10 @@ proto.attachedCallback = function() {
   // TODO;
 };
 
+proto.detachedCallback = function() {
+  // TODO
+};
+
 proto.attributeChangedCallback = function(attrName, oldValue, newValue) {
   //  TODO
 };

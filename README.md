@@ -41,12 +41,11 @@ This project is under development and is not ready for use. Please checkout the 
         document.body.appendChild(aForm);
     ```
 
-### API
+##API
 
 FormsJS inherits from `HTMLFormElement`. 
 
-#### Constructor Arguments
-FormsJS accepts three arguments:
+#### Configurations
 
 ##### `model` (required)
 
