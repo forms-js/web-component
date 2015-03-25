@@ -43,7 +43,7 @@ class FormsJS extends HTMLFormElement {
 
 // Register element and expose DOM API under formsjs name-space
 if (!window.formsjs) {
-    throw new Error('Did not found formsjs');
+    throw new Error('Did not find formsjs');
 }
 window.formsjs.FormElement = document.registerElement('forms-js', {
   prototype: FormsJS.prototype,
