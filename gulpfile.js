@@ -79,9 +79,8 @@ gulp.task('connect', function() {
 });
 
 gulp.task('open', function () {
-  gulp.src(__dirname)
+  gulp.src('./demo/index.html')
   .pipe(openBrowser('', {
-    app: 'chrome',
     url: 'http://localhost:8123/demo'
   }));
 })
