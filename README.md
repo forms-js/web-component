@@ -65,6 +65,16 @@ TODO
 Returns a `FormData` object from data inputed into the form
 
 
+## Development
+
+Make sure you have npm and Gulp installed. Following commands are available:
+
+#### `gulp`
+Make a new build
+
+#### `gulp serve`
+Starts a server and watches for changes to reload the browser.
+
 ## License
 MIT
 
