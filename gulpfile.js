@@ -10,6 +10,8 @@ var order = require('gulp-order');
 var header = require('gulp-header');
 var wrap = require('gulp-wrap');
 var watch = require('gulp-watch');
+var connect = require('gulp-connect');
+var openBrowser = require('gulp-open');
 
 var pkg = require('./package.json');
 
@@ -28,19 +30,26 @@ function scripts() {
     .pipe(babel())
     .on('error', log)
     .pipe(wrap('(function(){\n<%= contents %>\n}).call(this);'))
-    .pipe(wrap('<script>\n<%= contents %>\n</script>'));
+    .pipe(wrap('<script>\n<%= contents %>\n</script>'))
+    .pipe(connect.reload());
 }
 
 function styles() {
   return gulp.src('src/less/**/*.less')
     .pipe(less())
     .on('error', log)
-    .pipe(wrap('<style>\n<%= contents %>\n</style>'));
+    .pipe(wrap('<style>\n<%= contents %>\n</style>'))
+    .pipe(connect.reload());
+}
+
+function html() {
+  return gulp.src('src/template/index.html')
+    .pipe(connect.reload());
 }
 
 gulp.task('build', function () {
   return es.merge([
-    gulp.src('src/template/index.html'),
+    html(),
     styles(),
     scripts()
   ])
@@ -61,9 +70,26 @@ gulp.task('watch', function() {
   });
 });
 
+gulp.task('connect', function() {
+  return connect.server({
+    port: 8123,
+    root: '.',
+    livereload: true
+  });
+});
+
+gulp.task('open', function () {
+  gulp.src(__dirname)
+  .pipe(openBrowser('', {
+    app: 'chrome',
+    url: 'http://localhost:8123/demo'
+  }));
+})
+
 function log(error) {
   console.error(error.toString && error.toString());
 }
 
 
 gulp.task('default', ['build', 'copy']);
+gulp.task('serve', ['default', 'watch', 'connect', 'open'])
