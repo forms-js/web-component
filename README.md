@@ -29,12 +29,15 @@ This project is under development and is not ready for use. Please checkout the 
     
     **HTML**
     ```html
-    <forms-js model="{/*..*/}" view="{/*..*/}" validation="{/*..*/}"></forms-js>
+    <form is="forms-js" model="{/*..*/}" view="{/*..*/}" validation="{/*..*/}"></form>
     ```
 
     **JavaScript**
     ```js
-        var aForm = new FormsJS(model, view, validation);
+        var aForm = new FormsJS();
+        aForm.model = aModel;
+        aForm.validation = aValidation;
+        aForm.view = aView;
         document.body.appendChild(aForm);
     ```
 
