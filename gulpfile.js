@@ -50,6 +50,11 @@ gulp.task('build', function () {
   .pipe(gulp.dest('dist'));
 });
 
+gulp.task('copy', function(){
+  return gulp.src('./node_modules/forms-js/dist/forms-js.js')
+    .pipe(gulp.dest('dist'));
+});
+
 gulp.task('watch', function() {
   return watch('{src,demo}/**/*.{js,less,html}', function(){
     gulp.start('build');
@@ -61,4 +66,4 @@ function log(error) {
 }
 
 
-gulp.task('default', ['build']);
+gulp.task('default', ['build', 'copy']);
