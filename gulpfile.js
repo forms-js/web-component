@@ -12,6 +12,7 @@ var wrap = require('gulp-wrap');
 var watch = require('gulp-watch');
 var connect = require('gulp-connect');
 var openBrowser = require('gulp-open');
+var karma = require('gulp-karma');
 
 var pkg = require('./package.json');
 
@@ -84,6 +85,23 @@ gulp.task('open', function () {
     url: 'http://localhost:8123/demo'
   }));
 })
+
+gulp.task('test', function() {
+  return gulp.src([])
+    .pipe(karma({
+      configFile: 'karma.conf.js',
+      action: 'run'
+    }))
+    .on('error', log);
+});
+
+gulp.task('test:watch', function() {
+  return gulp.src([])
+    .pipe(karma({
+      configFile: 'karma.conf.js',
+      action: 'watch'
+    }));
+});
 
 function log(error) {
   console.error(error.toString && error.toString());
