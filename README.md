@@ -1,5 +1,7 @@
 # [forms-js](https://github.com/forms-js/forms-js) web component
 
+[![Build Status](https://travis-ci.org/forms-js/web-component.svg)](https://travis-ci.org/forms-js/web-component)
+
 > [forms-js](https://github.com/forms-js/forms-js) web component adapter 
 
 ## Warning: under development
@@ -65,7 +67,7 @@ TODO
 Returns a `FormData` object from data inputed into the form
 
 
-## Development
+## Development and Testing
 
 Make sure you have npm and Gulp installed. Following commands are available:
 
@@ -74,6 +76,12 @@ Make a new build
 
 #### `gulp serve`
 Starts a server and watches for changes to reload the browser.
+
+#### `gulp test`
+Run the tests
+
+#### `gulp test:watch`
+Runs the tests and watches for changes in code to re-run the tests.
 
 ## License
 MIT
