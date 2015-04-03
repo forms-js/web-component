@@ -32,6 +32,7 @@
     "gulp-watch": "^4.1.1",
     "gulp-wrap": "^0.11.0",
     "karma": "^0.12.31",
+    "karma-babel-preprocessor": "^5.0.0",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.1.7",
     "karma-firefox-launcher": "^0.1.4",

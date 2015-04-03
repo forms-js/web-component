@@ -7,6 +7,7 @@ module.exports = function(config) {
     frameworks: ['mocha', 'chai'],
     reporters: ['mocha'],
     preprocessors: {
+      'test/**/*.js': ['babel']
     },
     files: [
       'node_modules/forms-js/dist/forms-js.js',
@@ -23,7 +24,8 @@ module.exports = function(config) {
       'karma-chrome-launcher',
       'karma-mocha-reporter',
       'karma-mocha',
-      'karma-chai'
+      'karma-chai',
+      'karma-babel-preprocessor'
     ],
     singleRun: false,
     colors: true,
