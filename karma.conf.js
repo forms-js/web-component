@@ -4,7 +4,8 @@ module.exports = function(config) {
   config.set({
     autoWatch: true,
     basePath: __dirname,
-    frameworks: ['jasmine'],
+    frameworks: ['mocha', 'chai'],
+    reporters: ['mocha'],
     preprocessors: {
     },
     files: [
@@ -20,7 +21,9 @@ module.exports = function(config) {
     plugins: [
       'karma-firefox-launcher',
       'karma-chrome-launcher',
-      'karma-jasmine'
+      'karma-mocha-reporter',
+      'karma-mocha',
+      'karma-chai'
     ],
     singleRun: false,
     colors: true,
