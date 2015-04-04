@@ -17,8 +17,14 @@ module.exports = function(config) {
     exclude: [],
     port: 8989,
     browsers: [
-      process.env.TRAVIS ? 'Firefox' : 'Chrome'
+      process.env.TRAVIS ? 'Chrome_travis_ci' : 'Chrome'
     ],
+    customLaunchers: {
+      Chrome_travis_ci: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    },
     plugins: [
       'karma-firefox-launcher',
       'karma-chrome-launcher',
