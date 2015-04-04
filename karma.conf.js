@@ -13,7 +13,7 @@ module.exports = function(config) {
       'node_modules/forms-js/dist/forms-js.js',
       'dist/*.js',
       'test/**/*.js',
-      {pattern: 'dist/index.html', included: false }
+      'dist/index.html'
     ],
     exclude: [],
     port: 8989,
