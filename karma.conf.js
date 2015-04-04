@@ -11,7 +11,6 @@ module.exports = function(config) {
     },
     files: [
       'node_modules/forms-js/dist/forms-js.js',
-      'dist/*.js',
       'test/**/*.js',
       'dist/index.html'
     ],
